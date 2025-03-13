@@ -474,6 +474,11 @@ func offset(buffer []byte, reader io.Reader) (uint64, error) {
 		if err != nil {
 			return 0, err
 		}
+	case "arm64":
+		err = binary.Read(reader, binary.LittleEndian, &dataPtr)
+		if err != nil {
+			return 0, err
+		}
 	case "386":
 		var p uint32
 		err = binary.Read(reader, binary.LittleEndian, &p)

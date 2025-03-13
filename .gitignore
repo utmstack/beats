@@ -1,6 +1,6 @@
 # Directories
 /.vagrant
-/.idea
+**/.idea
 /.vscode
 /build
 /*/*.template*.json
